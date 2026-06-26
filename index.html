@@ -20,6 +20,30 @@
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
+  <!-- "UnderOneFacade" 彩色文字效果，渐变色 -->
+  <style>
+    .uof-color {
+      background: linear-gradient(90deg, #2B6CB0, #38A169, #D69E2E, #C05621);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 700;
+    }
+    .stat-block {
+      display: block;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #2B6CB0;
+      line-height: 1.2;
+    }
+    .stat-label {
+      display: block;
+      font-size: 0.95rem;
+      color: #5a5a5a;
+      margin-top: 4px;
+    }
+  </style>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
@@ -33,7 +57,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">UnderOneFacade: Worldwide Facade Semantic Segmentation Benchmark Dataset</h1>
+          <h1 class="title is-1 publication-title"><span class="uof-color">UnderOneFacade</span>: Worldwide Facade Semantic Segmentation Benchmark Dataset</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://github.com/JiangyuanWangYi">Yi Wang</a><sup>1,*</sup>,</span>
@@ -126,8 +150,8 @@
     <div class="hero-body">
       <img src="./static/images/teaser.png" alt="UnderOneFacade overview">
       <h2 class="subtitle has-text-centered">
-        UnderOneFacade: centimeter-accurate facade point clouds collected across multiple countries,
-        with hierarchical semantic labels totaling <strong>2.7 billion</strong> annotated points.
+        Building on <a href="https://github.com/OloOcki/zaha" target="_blank" rel="noopener"><strong>ZAHA</strong></a>,
+        <span class="uof-color">UnderOneFacade</span> is — to date — the <strong>largest benchmark for facade semantic segmentation</strong> of point clouds.
       </h2>
     </div>
   </div>
@@ -146,7 +170,7 @@
             transferable 3D facade segmentation. However, progress in facade parsing is limited by the
             lack of large-scale, standardized benchmarks for evaluating cross-domain generalization.
             Existing datasets are geographically narrow, semantically inconsistent, or insufficiently
-            precise. We introduce UnderOneFacade, the largest cross-country and cross-continent 3D
+            precise. We introduce <span class="uof-color">UnderOneFacade</span>, the largest cross-country and cross-continent 3D
             facade benchmark to date, comprising centimeter-accurate point clouds with hierarchical,
             harmonized, and architecturally grounded semantic labels totaling 2.7 billion annotated
             points. Through a systematic evaluation of representative point-, graph- and
@@ -154,7 +178,7 @@
             fine-grained architectural elements and degrade significantly across geographic domains,
             with the best models achieving only up to 33 IoU on the fine-grained LoFG3 benchmark. By
             combining geometric precision with standardized semantics at unprecedented scale,
-            UnderOneFacade establishes a rigorous benchmark for developing robust and transferable 3D
+            <span class="uof-color">UnderOneFacade</span> establishes a rigorous benchmark for developing robust and transferable 3D
             segmentation models. The dataset, evaluation scripts, and pretrained models will be
             released upon publication.
           </p>
@@ -162,6 +186,44 @@
       </div>
     </div>
     <!--/ Abstract. -->
+
+    <!-- Key Stats -->
+    <div class="columns is-centered has-text-centered" style="margin-top: 1rem;">
+      <div class="column">
+        <span class="stat-block">2.7 B</span>
+        <span class="stat-label">annotated points</span>
+      </div>
+      <div class="column">
+        <span class="stat-block">3</span>
+        <span class="stat-label">continents (UK, Germany, Singapore)</span>
+      </div>
+      <div class="column">
+        <span class="stat-block">15 / 5</span>
+        <span class="stat-label">classes at LoFG3 / LoFG2</span>
+      </div>
+      <div class="column">
+        <span class="stat-block">6</span>
+        <span class="stat-label">benchmarked architectures</span>
+      </div>
+    </div>
+    <!--/ Key Stats -->
+
+    <!-- Highlights -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">🌟 Highlights</h2>
+        <div class="content">
+          <ul>
+            <li>Building on <a href="https://github.com/OloOcki/zaha" target="_blank" rel="noopener">ZAHA</a>, we extend the <strong>LoFG (Level of Facade Generalization)</strong> taxonomy from a single city to a harmonized scheme spanning continents</li>
+            <li>Combines <strong>Victorian, Haussmann, and Southeast Asian colonial/modern</strong> architectural styles across the UK, Germany, and Singapore subsets</li>
+            <li>Centimeter-accurate geometry from <strong>multi-sensor acquisition</strong> — Leica RTC360, Leica BLK360, and the MODISSA mobile mapping platform</li>
+            <li>Reveals strong <strong>cross-continental domain shift</strong>: several models degrade by more than 30 F1 points between European and Asian facades</li>
+            <li>❗ The dataset link above provides the data at original point cloud density; for region-specific subsets (Singapore / Germany / UK), see <a href="#">here</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--/ Highlights -->
 
     <!-- Overview video. -->
     <div class="columns is-centered has-text-centered" id="video">
