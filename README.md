@@ -1,16 +1,32 @@
-# Nerfies
+# 🏡 🏯 UnderOneFacade 🏢 🏡
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+**Building on [ZAHA](https://github.com/OloOcki/zaha), UnderOneFacade is — to date — the largest benchmark for facade semantic segmentation of point clouds.**
 
-If you find Nerfies useful for your work please cite:
-```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}
-```
+[[Dataset]](#) [[Paper]](#) [[Benchmark]](#) [[More]](#)
 
-# Website License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+<!-- 把你的方法图/teaser图放进 img/ 文件夹，文件名换成你自己的 -->
+![teaser](images/teaser.png)
+
+## 🌟 Highlights
+
+- **2.7 billion** annotated points — the largest cross-country 3D facade benchmark to date
+- Spans **three continents** (UK, Germany, Singapore), combining Victorian, Haussmann, and Southeast Asian colonial/modern architectural styles
+- Centimeter-accurate geometry from **multi-sensor acquisition** (TLS + MLS: Leica RTC360, Leica BLK360, MODISSA platform)
+- Adopts and extends the **LoFG (Level of Facade Generalization)** taxonomy across countries — 15 classes at LoFG3, 5 at LoFG2
+- Benchmarks **6 representative architectures** (PointNet++, KPConv, DGCNN, PointTransformer v1, PointTransformer v3, OctFormer)
+- Reveals strong **cross-continental domain shift**: several models degrade by more than 30 F1 points between European and Asian facades
+- ❗The link above provides the dataset at original point cloud density; for region-specific subsets (Singapore / Germany / UK), see [here](#)
+
+## 📹 Preview
+[There will be a video here]
+
+## 📝 Abstract
+
+Globally consistent semantic digital twins require centimeter-accurate and geographically transferable 3D facade segmentation. However, progress in facade parsing is limited by the lack of large-scale, standardized benchmarks for evaluating cross-domain generalization. Existing datasets are geographically narrow, semantically inconsistent, or insufficiently precise. We introduce UnderOneFacade, the largest cross-country and cross-continent 3D facade benchmark to date, comprising centimeter-accurate point clouds with hierarchical, harmonized, and architecturally grounded semantic labels totaling 2.7 billion annotated points. Through a systematic evaluation of representative point-, graph- and transformer-based architectures, we show that current methods struggle to recognize fine-grained architectural elements and degrade significantly across geographic domains, with the best models achieving only up to 33 IoU on the fine-grained LoFG3 benchmark. By combining geometric precision with standardized semantics at unprecedented scale, UnderOneFacade establishes a rigorous benchmark for developing robust and transferable 3D segmentation models. The dataset, evaluation scripts, and pretrained models will be released upon publication.
+
+## 🎓 Publication
+
+Please find our paper accepted at ECCV 2026:
+
+
+## 🤝 Acknowledgments
