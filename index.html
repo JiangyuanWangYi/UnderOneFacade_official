@@ -260,14 +260,25 @@
     <!--/ Preview -->
   </div>
 
-  <div class="columns is-centered has-text-centered" style="margin-top: 3rem;">
+<div class="columns is-centered has-text-centered" style="margin-top: 3rem;">
   <div class="column is-four-fifths">
-    <h2 class="title is-3">🔎 Facade Semantic Segmentation Results</h2>
-    <figure class="image" style="max-width: 900px; margin: 0 auto;">
-      <img src="./static/images/LoFG3_revised.png" alt="Facade Semantic Segmentation LoFG3">
-    </figure>
-    <p class="content" style="margin-top: 1rem;">
-      </strong> Qualitative facade segmentation results on UnderOneFacade on the LoFG3.
+    <h2 class="title is-3 has-text-centered">🔎 Facade Semantic Segmentation Results</h2>
+
+    <div class="columns is-centered" style="margin-top: 1rem;">
+      <div class="column is-half has-text-centered">
+        <figure class="image" style="max-width: 480px; margin: 0 auto;">
+          <img src="./static/images/LoFG3_revised.png" alt="Facade Semantic Segmentation LoFG3">
+        </figure>
+      </div>
+      <div class="column is-half has-text-centered">
+        <figure class="image" style="max-width: 480px; margin: 0 auto;">
+          <img src="./static/images/LoFG2.png" alt="Facade Semantic Segmentation LoFG2">
+        </figure>
+      </div>
+    </div>
+
+    <p class="content has-text-justified" style="margin-top: 1.5rem;">
+      <strong>Figure 1 (left):</strong> Qualitative facade segmentation results on UnderOneFacade on the LoFG3.
       We visualize predictions of representative architectures across scenes from different countries.
       Rows show example facades, while columns correspond to different segmentation models.
       Despite correct segmentation of dominant structures such as <em>walls</em> and <em>roofs</em>,
@@ -275,14 +286,17 @@
       <em>windows</em>, <em>doors</em>, and decorative components. These examples illustrate the
       challenges posed by long-tailed semantics and cross-country architectural variability.
     </p>
-    <figure class="image" style="max-width: 900px; margin-top: 2rem;">
-      <img src="./static/images/LoFG2.png" alt="Facade Semantic Segmentation LoFG2">
-    </figure>
-    <p class="content" style="margin-top: 1rem;">
-      </strong> Qualitative facade segmentation results on UnderOneFacade at the LoFG2 level. Rows show example facades from different countries, while columns correspond to predictions from representative segmentation architectures. Compared to the LoFG3 level, the aggregated LoFG2 hierarchy allows models to more reliably capture dominant structural regions such as <em>structural or <em>floor.
-However, inconsistencies remain in regions corresponding to facade openings and decorative structures, which are often confused with surrounding structural elements.
-These examples illustrate that although semantic aggregation improves visual consistency, segmentation errors persist due to architectural variability and the long-tailed distribution of facade components.
-See the main paper for qualitative results on the fine-grained LoFG3 hierarchy.
+
+    <p class="content has-text-justified" style="margin-top: 1rem;">
+      <strong>Figure 2 (right):</strong> Qualitative facade segmentation results on UnderOneFacade at the LoFG2 level.
+      Rows show example facades from different countries, while columns correspond to predictions from
+      representative segmentation architectures. Compared to the LoFG3 level, the aggregated LoFG2 hierarchy
+      allows models to more reliably capture dominant structural regions such as <em>structural</em> or <em>floor</em>.
+      However, inconsistencies remain in regions corresponding to facade openings and decorative structures,
+      which are often confused with surrounding structural elements. These examples illustrate that although
+      semantic aggregation improves visual consistency, segmentation errors persist due to architectural
+      variability and the long-tailed distribution of facade components. See the main paper for qualitative
+      results on the fine-grained LoFG3 hierarchy.
     </p>
   </div>
 </div>
