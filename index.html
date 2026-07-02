@@ -217,7 +217,7 @@
         <span class="stat-label">classes at LoFG3 / LoFG2</span>
       </div>
       <div class="column">
-        <span class="stat-block">6</span>
+        <span class="stat-block">8</span>
         <span class="stat-label">benchmarked architectures</span>
       </div>
     </div>
@@ -289,28 +289,25 @@
 
     <p class="content has-text-justified" style="margin-top: 1rem;">
       <strong>Figure right:</strong> Qualitative facade segmentation results on UnderOneFacade at the LoFG2 level.
-      Rows show example facades from different countries, while columns correspond to predictions from
-      representative segmentation architectures. Compared to the LoFG3 level, the aggregated LoFG2 hierarchy
+      Compared to the LoFG3 level, the aggregated LoFG2 hierarchy
       allows models to more reliably capture dominant structural regions such as <em>structural</em> or <em>floor</em>.
       However, inconsistencies remain in regions corresponding to facade openings and decorative structures,
       which are often confused with surrounding structural elements. These examples illustrate that although
       semantic aggregation improves visual consistency, segmentation errors persist due to architectural
-      variability and the long-tailed distribution of facade components. See the main paper for qualitative
-      results on the fine-grained LoFG3 hierarchy.
+      variability and the long-tailed distribution of facade components.
     </p>
   </div>
 </div>
 
 <div class="columns is-centered" style="margin-top: 3rem;">
-  <div class="column is-full">
-    <h2 class="title is-3 has-text-centered">📋 Per-Class F1 Performance Comparison</h2>
+  <div class="column" style="max-width: 1100px; margin: 0 auto;">
+    <h2 class="title is-3 has-text-centered">📋 Per-Class Performance Comparison</h2>
     <p class="content has-text-left">
-      <strong>Table:</strong> Per-class F1 performance comparison on the UnderOneFacade dataset.
-      Best result in each row is shown in bold.
+      <strong>Table:</strong> Per-class F1 performance comparison on the UnderOneFacade dataset (Results under an updated, method-specific training protocol. See more details in the main paper.).
+      The best result in each row is shown in bold.
     </p>
-
     <div class="table-container">
-      <table class="table is-fullwidth is-narrow" style="font-size: 0.8rem;">
+      <table class="table is-fullwidth is-narrow" style="font-size: 0.72rem;">
         <thead>
           <tr>
             <th>Metric/Class</th>
@@ -402,7 +399,8 @@
           </p>
           <p>
             Page template borrowed from <a
-              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.We sincerely thank <a
+              href="https://keunhong.com">Keunhong Park for developing and open-sourcing this template.
           </p>
         </div>
       </div>
