@@ -240,60 +240,6 @@
       </div>
     </div>
     <!--/ Highlights -->
-
-<div class="columns is-centered" style="margin-top: 3rem;">
-  <div class="column is-four-fifths">
-    <h2 class="title is-3">📊 Comparison with Existing Datasets</h2>
-    <p class="content">
-      <strong>Table 1:</strong> Urban point cloud benchmark datasets for semantic segmentation.
-      Columns indicate multi-national scope, multi-sensor acquisition, and whether hierarchical
-      semantic classes are provided.
-    </p>
-    <table class="table is-fullwidth is-narrow">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Year</th>
-          <th>Sensor</th>
-          <th>Real / Synth</th>
-          <th>#Cls</th>
-          <th>Facade classes?</th>
-          <th>#Facade-Labeled points</th>
-          <th>Multi-National?</th>
-          <th>Multi-Sensor?</th>
-          <th>Hierarchical classes?</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Oakland 3D [30]</td>
-          <td>2009</td>
-          <td>MLS</td>
-          <td>real</td>
-          <td>44</td>
-          <td>❌</td>
-          <td>&lt;0.1B</td>
-          <td>❌</td>
-          <td>❌</td>
-          <td>❌</td>
-        </tr>
-        <!-- 继续添加每一行 -->
-        <tr>
-          <td><strong>UnderOneFacade (Our)</strong></td>
-          <td><strong>2026</strong></td>
-          <td><strong>TLS/MLS</strong></td>
-          <td><strong>real</strong></td>
-          <td><strong>15</strong></td>
-          <td>✅</td>
-          <td><strong>2.7 B</strong></td>
-          <td>✅</td>
-          <td>✅</td>
-          <td>✅</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
     
     <!-- Preview -->
     <div class="columns is-centered has-text-centered" style="margin-top: 3rem;">
@@ -314,10 +260,10 @@
     <!--/ Preview -->
   </div>
 
-  <div class="columns is-centered" style="margin-top: 3rem;">
+  <div class="columns is-centered has-text-centered" style="margin-top: 3rem;">
   <div class="column is-four-fifths">
     <h2 class="title is-3">🔎 Facade Semantic Segmentation Results</h2>
-    <figure class="image">
+    <figure class="image" style="max-width: 900px; margin: 0 auto;">
       <img src="./static/images/LoFG3_revised.png" alt="Facade Semantic Segmentation LoFG3">
     </figure>
     <p class="content" style="margin-top: 1rem;">
@@ -328,6 +274,15 @@
       models struggle to consistently recognize fine-grained facade elements, including
       <em>windows</em>, <em>doors</em>, and decorative components. These examples illustrate the
       challenges posed by long-tailed semantics and cross-country architectural variability.
+    </p>
+    <figure class="image" style="max-width: 900px; margin-top: 2rem;">
+      <img src="./static/images/LoFG2.png" alt="Facade Semantic Segmentation LoFG2">
+    </figure>
+    <p class="content" style="margin-top: 1rem;">
+      </strong> Qualitative facade segmentation results on UnderOneFacade at the LoFG2 level. Rows show example facades from different countries, while columns correspond to predictions from representative segmentation architectures. Compared to the LoFG3 level, the aggregated LoFG2 hierarchy allows models to more reliably capture dominant structural regions such as <em>structural or <em>floor.
+However, inconsistencies remain in regions corresponding to facade openings and decorative structures, which are often confused with surrounding structural elements.
+These examples illustrate that although semantic aggregation improves visual consistency, segmentation errors persist due to architectural variability and the long-tailed distribution of facade components.
+See the main paper for qualitative results on the fine-grained LoFG3 hierarchy.
     </p>
   </div>
 </div>
