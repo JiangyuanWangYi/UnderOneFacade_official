@@ -224,7 +224,7 @@
     <!--/ Key Stats -->
 
     <!-- Highlights -->
-    <div class="columns is-centered">
+    <div class="columns is-centered" style="margin-top: 3rem;">
       <div class="column is-four-fifths">
         <h2 class="title is-3 has-text-centered">🌟 Highlights</h2>
         <div class="content has-text-justified">
@@ -241,7 +241,7 @@
     </div>
     <!--/ Highlights -->
 
-<div class="columns is-centered">
+<div class="columns is-centered" style="margin-top: 3rem;">
   <div class="column is-four-fifths">
     <h2 class="title is-3">📊 Comparison with Existing Datasets</h2>
     <p class="content">
@@ -296,7 +296,7 @@
 </div>
     
     <!-- Preview -->
-    <div class="columns is-centered has-text-centered" style="margin-top: 2rem;">
+    <div class="columns is-centered has-text-centered" style="margin-top: 3rem;">
       <div class="column is-four-fifths">
         <h2 class="title is-3">📽️ Preview</h2>
         <p class="content">A short overview of the UnderOneFacade dataset and benchmark.</p>
@@ -305,13 +305,36 @@
             <source src="./static/videos/UnderOneFacade_visualization_1.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
           </video>
+          <figure class="image">
+            <img src="./static/images/underonefacade-hierarchicalSemantics_ver2.png" alt="Facade segmentation preview">
+          </figure>
         </div>
       </div>
     </div>
     <!--/ Preview -->
   </div>
-</section>
 
+  <div class="columns is-centered" style="margin-top: 3rem;">
+  <div class="column is-four-fifths">
+    <h2 class="title is-3">🔎 Facade Semantic Segmentation Results</h2>
+    <figure class="image">
+      <img src="./static/images/LoFG3_revised.png" alt="Facade Semantic Segmentation LoFG3">
+    </figure>
+    <p class="content" style="margin-top: 1rem;">
+      </strong> Qualitative facade segmentation results on UnderOneFacade on the LoFG3.
+      We visualize predictions of representative architectures across scenes from different countries.
+      Rows show example facades, while columns correspond to different segmentation models.
+      Despite correct segmentation of dominant structures such as <em>walls</em> and <em>roofs</em>,
+      models struggle to consistently recognize fine-grained facade elements, including
+      <em>windows</em>, <em>doors</em>, and decorative components. These examples illustrate the
+      challenges posed by long-tailed semantics and cross-country architectural variability.
+    </p>
+  </div>
+</div>
+  
+</section>
+  
+  
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
