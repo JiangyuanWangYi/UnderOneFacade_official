@@ -224,10 +224,11 @@
     <!--/ Key Stats -->
 
     <!-- Highlights -->
-    <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">🌟 Highlights</h2>
-        <div class="content">
+        <h2 class="title is-3 has-text-centered">🌟 Highlights</h2>
+        <div class="content has-text-justified">
+        <!-- <div class="content"> -->
           <ul>
             <li>Building on <a href="https://github.com/OloOcki/zaha" target="_blank" rel="noopener">ZAHA</a>, we extend the <strong>LoFG (Level of Facade Generalization)</strong> taxonomy from a single city to a harmonized scheme spanning continents</li>
             <li>Combines <strong>Victorian, Haussmann, and Southeast Asian colonial/modern</strong> architectural styles across the UK, Germany, and Singapore subsets</li>
@@ -240,6 +241,60 @@
     </div>
     <!--/ Highlights -->
 
+<div class="columns is-centered">
+  <div class="column is-four-fifths">
+    <h2 class="title is-3">📊 Comparison with Existing Datasets</h2>
+    <p class="content">
+      <strong>Table 1:</strong> Urban point cloud benchmark datasets for semantic segmentation.
+      Columns indicate multi-national scope, multi-sensor acquisition, and whether hierarchical
+      semantic classes are provided.
+    </p>
+    <table class="table is-fullwidth is-narrow">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Year</th>
+          <th>Sensor</th>
+          <th>Real / Synth</th>
+          <th>#Cls</th>
+          <th>Facade classes?</th>
+          <th>#Facade-Labeled points</th>
+          <th>Multi-National?</th>
+          <th>Multi-Sensor?</th>
+          <th>Hierarchical classes?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Oakland 3D [30]</td>
+          <td>2009</td>
+          <td>MLS</td>
+          <td>real</td>
+          <td>44</td>
+          <td>❌</td>
+          <td>&lt;0.1B</td>
+          <td>❌</td>
+          <td>❌</td>
+          <td>❌</td>
+        </tr>
+        <!-- 继续添加每一行 -->
+        <tr>
+          <td><strong>UnderOneFacade (Our)</strong></td>
+          <td><strong>2026</strong></td>
+          <td><strong>TLS/MLS</strong></td>
+          <td><strong>real</strong></td>
+          <td><strong>15</strong></td>
+          <td>✅</td>
+          <td><strong>2.7 B</strong></td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>✅</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+    
     <!-- Preview -->
     <div class="columns is-centered has-text-centered" style="margin-top: 2rem;">
       <div class="column is-four-fifths">
